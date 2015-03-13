@@ -65,7 +65,4 @@ class BunyanLumberjackStream extends Writable
     done()
 
 module.exports = (options={}) ->
-  return new BunyanLumberjackStream
-    options.tlsOptions,
-    options.lumberjackOptions,
-    options
+  return new BunyanLumberjackStream options.tlsOptions, options.lumberjackOptions, options
