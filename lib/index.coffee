@@ -31,6 +31,7 @@ class BunyanLumberjackStream extends Writable
 
   _write: (entry, encoding, done) ->
 
+    entry = JSON.parse entry
     host = entry.hostname ? @_host
 
     # Massage the entry to look like a logstash entry.
